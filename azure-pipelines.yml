@@ -23,7 +23,7 @@ steps:
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(agent.builddirectory)'
-    Contents: '**'
+    Contents: '**/.war'
     TargetFolder: '$(build.artifactstagingdirectory)'
     retryCount: '2'
 
