@@ -26,6 +26,11 @@ steps:
     Contents: '**/*.war'
     TargetFolder: '$(build.artifactstagingdirectory)'
     retryCount: '2'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'artifact1'
+    publishLocation: 'Container'
 
 
 
