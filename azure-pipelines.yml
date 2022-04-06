@@ -36,6 +36,12 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'artifact1'
     publishLocation: 'Container'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Dockerhubaccess'
+    repository: 'sushmalearing123'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
 
 
 
